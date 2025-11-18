@@ -29,6 +29,9 @@ export class ChangeStage extends Scene {
 
   init(gameStage: IGameInitialStage) {
     this._gameStage = gameStage;
+
+    const defaultInitialStage = getInitialGameStage();
+    this._gameStage.time = defaultInitialStage.time;
   }
 
   create() {
