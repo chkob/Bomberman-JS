@@ -66,7 +66,7 @@ export class Player extends Physics.Arcade.Sprite {
     this.setScale(2.0);
 
     // This line reduce the physics body, it is to reduce the friction when the player is walking
-    this.setBodySize(this.width - 5, this.height);
+    this.setBodySize(this.width - 5, this.height - 5);
 
     this._validateSavedPlayer(gameStage);
     this._setUpControls();
