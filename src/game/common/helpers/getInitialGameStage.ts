@@ -12,7 +12,7 @@ const getInitialGameStage = (): IGameInitialStage => {
   return {
     stage: GAME_STAGE_ENUM.ONE,
     lives: 5,
-    time: 200,
+    time: 600,
     status: GAME_STATUS_ENUM.START,
     totalScore: 0,
     stageScore: 0,
