@@ -21,18 +21,18 @@
   },
   "homepage": "https://github.com/pr0mming/Bomberman-JS#readme",
   "dependencies": {
-    "phaser": "^3.85.2"
+    "phaser": "^3.90.0"
   },
   "devDependencies": {
-    "@eslint/js": "^9.11.1",
-    "eslint": "^8.57.1",
-    "globals": "^15.9.0",
-    "husky": "^9.1.6",
-    "lint-staged": "^15.2.10",
-    "prettier": "3.2.5",
-    "terser": "^5.34.0",
-    "typescript": "^5.6.2",
-    "typescript-eslint": "^7.18.0",
-    "vite": "^5.4.8"
+    "@eslint/js": "^9.39.1",
+    "eslint": "^9.39.1",
+    "globals": "^16.5.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.6",
+    "prettier": "^3.6.2",
+    "terser": "^5.44.1",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "8.47",
+    "vite": "^7.2.2"
   }
 }
