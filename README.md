@@ -40,6 +40,18 @@ npm run build
 npm run preview
 ```
 
+- Build docker image:
+
+```bash
+build -t bomberman .
+```
+
+- Run from docker image:
+
+```bash
+docker run -d --restart unless-stopped -p 3000:3000 --name "bomberman" bomberman
+```
+
 ## Controls :video_game:
 
 - **Direction Keys:** Move the player
