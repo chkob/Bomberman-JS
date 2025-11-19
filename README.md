@@ -58,6 +58,7 @@ docker run -d --restart unless-stopped -p 3000:3000 --name "bomberman" bomberman
 - **X Key:** Put an bomb
 - **Space Bar:** Exploit an bomb
 - **S Key:** Save the game
+- **L Key:** Load the latest saved game
 
 ## Demo :sunglasses:
 
