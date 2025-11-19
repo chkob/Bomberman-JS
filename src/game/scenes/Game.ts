@@ -346,19 +346,17 @@ export class Game extends Scene {
         const _player = player as Player;
         const _door = door as Physics.Arcade.Image;
 
-        // console.log(`p: ${Math.floor(_player.body.center.x)},${Math.floor(_player.body.center.y)} d: ${Math.floor(_door.body.center.x)},${Math.floor(_door.body.center.y)}`);
-
         if (_player.body && _door.body) {
           const playerOverlapX =
             Math.abs(
               Math.floor(_player.body.center.x) -
                 Math.floor(_door.body.center.x)
-            ) <= 2;
+            ) <= 5;
           const playerOverlapY =
             Math.abs(
               Math.floor(_player.body.center.y) -
                 Math.floor(_door.body.center.y)
-            ) <= 2;
+            ) <= 5;
 
           return playerOverlapX && playerOverlapY;
         }
