@@ -86,6 +86,28 @@ export class SaveGameManager {
 
       this._saveGame();
     }
+
+    if (
+      this._player.body?.enable &&
+      this._controlsManager?.loadGameControl?.isDown
+    ) {
+      // Add little label ...
+      const tempText = this._scene.add
+        .text(850, 22, 'LOADING GAME ...')
+        .setFontFamily('"BitBold", "Tahoma"')
+        .setFontSize(15)
+        .setColor('white')
+        .setStroke('black', 2.5)
+        .setScrollFactor(0, 0);
+
+      this._scene.time.addEvent({
+        delay: 2000,
+        callback: () => tempText.destroy(true),
+        callbackScope: this
+      });
+
+      this._loadSaveGame();
+    }
   }
 
   /**
@@ -107,5 +129,13 @@ export class SaveGameManager {
       LOCAL_STORAGE_KEYS_ENUM.SAVED_GAME,
       JSON.stringify(savedGame)
     );
+  }
+
+  private _loadSaveGame() {
+    const savedGame = SaveGameManager.getLoadedGame();
+
+    if (savedGame) {
+      this._scene.scene.start('ChangeStage', savedGame.gameStage);
+    }
   }
 }
