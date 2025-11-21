@@ -43,7 +43,7 @@ npm run preview
 - Build docker image:
 
 ```bash
-build -t bomberman .
+docker build -f Dockerfile.alpine -t bomberman .
 ```
 
 - Run from docker image:
